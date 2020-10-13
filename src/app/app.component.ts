@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Output, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  mobile: boolean = false;
+export class AppComponent implements OnInit {
+  @Output() mobile: boolean;
+
+  ngOnInit() {
+
+  }
 }
