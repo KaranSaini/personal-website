@@ -1,1 +1,19 @@
-<p>mobile-nav works!</p>
+<nav>
+    <div 
+    [ngClass]="status ? 'burger toggle' : 'burger'"
+    (click)="onClick($event)" 
+    #burger>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div>
+        <h4>Karan Singh</h4>
+    </div>
+
+    <ul [ngClass] = "status ? 'nav-links nav-active' : 'nav-links'" #navlinks>
+        <li class="about"><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li class="projects"><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        <li class="resume"><a routerLink="/resume" routerLinkActive="active">Resume</a></li>
+    </ul>
+</nav>
