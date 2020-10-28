@@ -10,6 +10,7 @@ import { fader } from './animations';
 })
 export class AppComponent implements OnInit {
   ngOnInit() {
+    
   }
 
   prepareRoute(outlet: RouterOutlet) {

@@ -6,14 +6,14 @@
 }
 
 nav {
-    background-color: black;
+    background-color: $main-dark;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
 
     div {
-        color: $accent-color;
+        color: $main-light;
         letter-spacing: 5px;
     }
 
@@ -29,7 +29,7 @@ nav {
         div {
             width: 25px;
             height: 2.5px;
-            background-color: $accent-color;
+            background-color: $main-light;
             margin: 5px;
             transition: all 0.3s ease;
         }
@@ -38,7 +38,7 @@ nav {
 }
 
 a, a:active, a:visited {
-    color: $accent-color;
+    color: $main-light;
     text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ a, a:active, a:visited {
         left: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: black;
+        background-color: $main-dark;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -68,7 +68,7 @@ a, a:active, a:visited {
     }
     a, a:active, a:visited {
         text-decoration: none;
-        color: $accent-color;
+        color: $main-light;
     }
 }
 
