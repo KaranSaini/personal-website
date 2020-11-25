@@ -8,7 +8,7 @@
         <div class="line3"></div>
     </div>
     <div>
-        <h4>Karan Singh</h4>
+        <a href="/about"><h4>Karan Singh</h4></a>
     </div>
 
     <ul [ngClass] = "status ? 'nav-links nav-active' : 'nav-links'" #navlinks>
@@ -16,4 +16,20 @@
         <li class="projects"><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
         <li class="resume"><a routerLink="/resume" routerLinkActive="active">Resume</a></li>
     </ul>
+
+    <!-- <hr id="verticalDivider">
+    
+    <ul [ngClass] = "status ? 'icons icons-active' : 'icons'">
+        <li class="github">
+            <a>
+                <img src="../../assets/logo-github.svg" alt="Github">
+            </a>
+        </li>
+        <li class="linkedin">
+            <a>
+                <img src="../../assets/logo-linkedin.svg" alt="Linkedin">
+            </a>
+        </li>
+    </ul>
+     -->
 </nav>

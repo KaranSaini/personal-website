@@ -1,7 +1,14 @@
 import { HostListener, Component, OnInit } from '@angular/core';
 import {fader} from '../animations' ;
 
-import { of, Observable, Subscription, fromEvent } from 'rxjs';
+import { 
+  of,
+  Observable,
+  Subscription, 
+  fromEvent,
+  BehaviorSubject,
+  ReplaySubject } from 'rxjs';
+import { distinctUntilChanged, pairwise } from 'rxjs/operators';
 
 @Component({
   selector: 'app-projects',
@@ -11,22 +18,32 @@ import { of, Observable, Subscription, fromEvent } from 'rxjs';
 })
 export class ProjectsComponent implements OnInit {
   browserWindow: Window = window;
-  coordinates: Observable<Event> = fromEvent(window, 'scroll');
-  coordinateSub: Subscription = this.coordinates.subscribe((event: any) => {
-    console.log(this.browserWindow.pageYOffset);
-    this.browserWindow.scrollBy(0, 100);
-  },
-  (err) => {
-    console.error(`something went wrong with the observable... ${err}`);
-  });
+  private cards: HTMLCollection = document.getElementsByClassName('idea');
 
-  // @HostListener("window:scroll", ['$event'])
-  // onScroll(event) {
-  //   console.log(`the y offset is ${window.pageYOffset}`);
-  // }
-  constructor() { }
-
+  // function for checking if an element is in the current viewport ... might turn this into a service for use with other comps
+  isElementInViewPort(el: Element) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+  
+  constructor() {
+  }
+  
   ngOnInit() {
+    //could refactor this later...animating cards in
+    this.browserWindow.addEventListener('scroll', (data) => {
+      const { timeStamp } = data;
+      if(this.isElementInViewPort(this.cards.item(1))) {
+        Array.from(this.cards).forEach((element) => {
+          element.classList.add('idea-show');
+        });
+      }
+    })
   }
 
 }

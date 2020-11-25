@@ -9,9 +9,10 @@ import { ResumeComponent } from './resume/resume.component';
 
 
 const routes: Routes = [
-  { path:'about', component: LandingCardComponent },
-  { path:'projects', component: ProjectsComponent },
-  { path:'resume', component: ResumeComponent }
+  { path: '', redirectTo: '/about', pathMatch: 'full' },
+  { path: 'about', component: LandingCardComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'resume', component: ResumeComponent }
 ];
 
 @NgModule({

@@ -2,32 +2,20 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-landing-card',
-  template: `
-  <div class="landing">
-    <div class="container image">
-      <img src="../assets/IMG_3232.jpg" alt="Karan Singh">
-    </div>
-    <h1>Karan Singh</h1>
-    <h2>About Me: </h2>
-    <p>
-      Software Engineer in the DC Metro Area.
-      <br>
-      Hobbies: Tennis, Muay Thai
-      <br>
-      Interests: Music
-    </p>
-    <button>Contact Me!</button>
-  </div>
-  `,
+  templateUrl: './landing-card-component.html',
   styleUrls: ['./landing-card.component.scss'],
   animations: []
 })
 export class LandingCardComponent implements OnInit {
-
+  imageContainer: HTMLCollection = document.getElementsByClassName('container image');
   constructor() { }
 
   ngOnInit() {
+    console.log(this.imageContainer)
+    setTimeout(() => {
+      Array.from(this.imageContainer).forEach((item) => {
+        item.classList.add('shrunk');
+      });
+    }, 1000);
   }
 }
-
-//options for landing page should be : about me, resume, contact me, projects
