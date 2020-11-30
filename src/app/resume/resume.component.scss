@@ -1,4 +1,10 @@
-iframe {
-    width: 100vw;
-    height: 90vh;
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    button:hover {
+        background-color: #E9E9E9;
+    }
 }
