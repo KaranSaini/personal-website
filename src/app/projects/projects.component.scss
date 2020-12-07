@@ -2,13 +2,9 @@
 
 h2 {
     padding: 0;
-    margin: 0 0 1rem 0;
+    margin: .5rem 0 .5rem 0;
     display: flex;
     justify-content: space-around;
-}
-
-hr {
-    
 }
 
 .card-list {
@@ -53,7 +49,7 @@ hr {
         header {
             box-sizing: border-box;
             padding: 0;
-            margin: 0;
+            margin-top: 1em;
             img {
                 position: static;
                 z-index: 2;
@@ -105,6 +101,12 @@ hr {
     opacity: 1;
 }
 
+.card {
+    h2 {
+        font-size: 2vw;
+    }
+}
+
 @media screen and (max-width:768px) {
     .card-list {
         justify-content: space-evenly;
@@ -112,7 +114,7 @@ hr {
     }
 
     .card {
-        min-width: 80vw;
+        min-width: 90vw;
     }
 
     .idea {
@@ -126,6 +128,39 @@ hr {
 
 @media screen and (max-width: 1024px) {
     .card {
-        min-width: 50vw;
+        min-width: 45vw;
+
+        h2 {
+            font-size: 3vw;
+        }
     }
 }
+
+//Media Queries specifically for iphone X -- in portrait
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) { 
+    .card {
+        min-width: 74vw;
+        
+        h2 {
+            font-size: 5vw;
+        }
+    }
+ }
+
+@media only screen 
+ and (min-device-width: 320px)
+ and (max-device-width: 568px )
+ and (-webkit-device-pixel-ratio : 2)
+ and (orientation : portrait) {
+    .card {
+        min-width: 80vw;
+
+        h2 {
+            font-size: 5vw;
+        }
+    }
+ }

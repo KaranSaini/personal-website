@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap");
+body {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fdfdfd;
+  font-family: 'Vollkorn SC', serif;
+  background: white;
+}
+
+main {
+  position: relative;
+}
+
+button {
+  font-size: 1em;
+  border-radius: 20px;
+  border-style: none;
+  color: #fdfdfd;
+  background-color: #171616;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: .5em 10% .5em 10%;
+  -webkit-transition: 1s;
+  transition: 1s;
+  max-width: 1000px;
+}
+
+button:hover {
+  color: #171616;
+  background-color: #fdfdfd;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.card {
+  background-color: #E9E9E9;
+}
+
+@-webkit-keyframes bttn-hvr {
+  0% {
+    color: #fdfdfd;
+    background-color: #171616;
+  }
+  100% {
+    color: #171616;
+    background-color: #fdfdfd;
+  }
+}
+
+@keyframes bttn-hvr {
+  0% {
+    color: #fdfdfd;
+    background-color: #171616;
+  }
+  100% {
+    color: #171616;
+    background-color: #fdfdfd;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

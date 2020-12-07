@@ -4,6 +4,12 @@
     justify-content: space-around;
     align-items: center;
 
+    form {
+        button {
+            width: 50vw;
+        }
+    }
+
     button:hover {
         background-color: #E9E9E9;
     }
