@@ -20,6 +20,7 @@
     font-size: 150%;
 }
 
+
 .container {
     box-sizing: border-box;
     position: relative;
@@ -34,6 +35,12 @@
         height: auto;
         margin-top: -25%;
     }
+}
+
+.container:hover {
+    transition: all 1s ease 1s;
+    width: 200px;
+    height: 200px;
 }
 
 .shrunk {

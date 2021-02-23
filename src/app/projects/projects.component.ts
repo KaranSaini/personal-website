@@ -1,5 +1,12 @@
 import { HostListener, Component, OnInit } from '@angular/core';
-import {fader} from '../animations' ;
+
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 import { 
   of,
@@ -14,7 +21,15 @@ import { distinctUntilChanged, pairwise } from 'rxjs/operators';
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  animations: []
+  animations: [
+    trigger('slideIn', [
+      state('*', style({ transform: 'translateX(0)' })),
+      transition('void => *', [
+        style({ transform: 'translateX(100%)' }),
+        animate(200)
+      ])
+    ])
+  ]
 })
 export class ProjectsComponent implements OnInit {
   browserWindow: Window = window;
@@ -30,10 +45,10 @@ export class ProjectsComponent implements OnInit {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-  
+
   constructor() {
   }
-  
+
   ngOnInit() {
     //could refactor this later...animating cards in
     this.browserWindow.addEventListener('scroll', (data) => {
@@ -43,7 +58,7 @@ export class ProjectsComponent implements OnInit {
           element.classList.add('idea-show');
         });
       }
-    })
+    });
   }
 
 }

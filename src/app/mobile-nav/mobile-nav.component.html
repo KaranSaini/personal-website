@@ -1,6 +1,7 @@
 <nav>
+    <!-- [ngClass]="status ? 'burger toggle' : 'burger'" -->
     <div 
-    [ngClass]="status ? 'burger toggle' : 'burger'"
+    class = "burger"
     (click)="onClick($event)" 
     #burger>
         <div class="line1"></div>
@@ -11,9 +12,10 @@
         <a href="/about"><h4>Karan Singh</h4></a>
     </div>
 
-    <ul [ngClass] = "status ? 'nav-links nav-active' : 'nav-links'" #navlinks>
+    <!-- <ul [ngClass] = "status ? 'nav-links nav-active' : 'nav-links'" #navlinks> -->
+    <ul class="nav-links" #navlinks>
         <li class="about"><a routerLink="/about" routerLinkActive="active">About</a></li>
         <li class="projects"><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
-        <li class="resume"><a routerLink="/resume" routerLinkActive="active">Resume</a></li>
+        <!-- <li class="resume"><a routerLink="/resume" routerLinkActive="active">Resume</a></li> -->
     </ul>
 </nav>

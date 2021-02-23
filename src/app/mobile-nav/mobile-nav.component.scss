@@ -17,6 +17,7 @@ nav {
     .name {
         box-sizing: border-box;
         margin-left: 3rem;
+        margin-right: 5vw;
     }
 
     div {
@@ -26,10 +27,13 @@ nav {
 
     .nav-links {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 50vw;
-
+        align-content: center;
         margin-right: 5rem;
+        li {
+            padding: 0 1rem;
+        }
     }
 
     .burger {
@@ -94,18 +98,18 @@ a, a:active, a:visited {
 
 .nav-active {
     min-width: 100vw !important; 
-  transform: translateX(0%);
-  position: absolute;
-  z-index: 5;
-  .about {
-    animation: navLinkFade 0.5s ease backwards .25s;
-  }
-  .projects {
-    animation: navLinkFade 0.5s ease backwards .5s;
-  }
-  .resume {
-    animation: navLinkFade 0.5s ease backwards .75s;
-  }
+    transform: translateX(0%);
+    position: absolute;
+    z-index: 5;
+    .about {
+        animation: navLinkFade 0.5s ease backwards .25s;
+    }
+    .projects {
+        animation: navLinkFade 0.5s ease backwards .5s;
+    }
+    .resume {
+        animation: navLinkFade 0.5s ease backwards .75s;
+    }
 }
 
 .toggle .line1 {
